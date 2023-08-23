@@ -9,14 +9,19 @@ let getComputerChoice = () => {
   }
 };
 
+let playerScore = 0;
+let computerScore = 0;
+
 let playRound = (playerSelection, computerSelection) => {
   if (
     (playerSelection === "rock" && computerSelection === "scissors") ||
     (playerSelection === "scissors" && computerSelection === "rock")
   ) {
     if (playerSelection === "rock") {
+      playerScore += 1;
       return "You Win! Rock beat Scissors";
     } else {
+      computerScore += 1;
       return "You Lose! Rock beat Scissors";
     }
   } else if (
@@ -24,8 +29,10 @@ let playRound = (playerSelection, computerSelection) => {
     (playerSelection === "paper" && computerSelection === "rock")
   ) {
     if (playerSelection === "paper") {
+      playerScore += 1;
       return "You Win! Paper beat Rocks";
     } else {
+      computerScore += 1;
       return " You lose! Paper beat Rocks";
     }
   } else if (
@@ -33,8 +40,10 @@ let playRound = (playerSelection, computerSelection) => {
     (playerSelection === "scissors" && computerSelection === "paper")
   ) {
     if (playerSelection === "scissors") {
+      playerScore += 1;
       return "You Win! Scissors beat Paper";
     } else {
+      computerScore += 1;
       return "You Lose! Scissors beat Paper";
     }
   } else if (
@@ -64,3 +73,5 @@ let game = () => {
     getSelections();
   }
 };
+
+console.log(game());
