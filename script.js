@@ -57,3 +57,10 @@ let getSelections = () => {
 
   console.log(playRound(playerSelection, computerSelection));
 };
+
+let game = () => {
+  for (let i = 1; i <= 5; i++) {
+    console.log(`This is round ${i}`);
+    getSelections();
+  }
+};
