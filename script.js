@@ -67,6 +67,22 @@ let getSelections = () => {
   console.log(playRound(playerSelection, computerSelection));
 };
 
+let findWinner = () => {
+  if (playerScore > computerScore) {
+    console.log(
+      `Congratulations! You win the game, Your Score is ${playerScore} and Computer Score is ${computerScore}`
+    );
+  } else if (computerScore > playerScore) {
+    console.log(
+      `Computer win the Game, Your Score is ${playerScore} and Computer Score is ${computerScore}`
+    );
+  } else {
+    console.log(
+      `Hence the every selection are not valid, your score is ${playerScore} and computer score is ${computerScore}`
+    );
+  }
+};
+
 let game = () => {
   for (let i = 1; i <= 5; i++) {
     console.log(`This is round ${i}`);
