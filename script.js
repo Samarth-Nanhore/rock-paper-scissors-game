@@ -47,3 +47,13 @@ let playRound = (playerSelection, computerSelection) => {
     return `Your selection ${playerSelection} is not valid hence no score will consider`;
   }
 };
+
+let getSelections = () => {
+  let playerSelection = prompt("Rock, Paper, Scissors ?").toLowerCase();
+  console.log(`Your selection is ${playerSelection}`);
+
+  let computerSelection = getComputerChoice().toLowerCase();
+  console.log(`Computer selection is ${computerSelection}`);
+
+  console.log(playRound(playerSelection, computerSelection));
+};
