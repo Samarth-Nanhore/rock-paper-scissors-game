@@ -88,6 +88,7 @@ let game = () => {
     console.log(`This is round ${i}`);
     getSelections();
   }
+  findWinner();
 };
 
 console.log(game());
