@@ -76,6 +76,10 @@ let findWinner = () => {
     console.log(
       `Computer win the Game, Your Score is ${playerScore} and Computer Score is ${computerScore}`
     );
+  } else if (computerScore === playerScore) {
+    console.log(
+      `It's draw! your score is ${playerScore} and computer score is ${computerScore} `
+    );
   } else {
     console.log(
       `Hence the every selection are not valid, your score is ${playerScore} and computer score is ${computerScore}`
