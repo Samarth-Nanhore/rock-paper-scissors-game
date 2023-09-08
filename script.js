@@ -87,12 +87,12 @@ let findWinner = () => {
   }
 };
 
-let game = () => {
-  for (let i = 1; i <= 5; i++) {
-    console.log(`This is round ${i}`);
-    getSelections();
-  }
-  findWinner();
-};
+// let game = () => {
+//   for (let i = 1; i <= 5; i++) {
+//     console.log(`This is round ${i}`);
+//     getSelections();
+//   }
+//   findWinner();
+// };
 
-console.log(game());
+// console.log(game());
