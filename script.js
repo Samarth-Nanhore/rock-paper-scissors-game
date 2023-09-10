@@ -29,11 +29,19 @@ let getComputerChoice = () => {
   }
 };
 
+let gameCount = 0;
+
 selectionBtnElements.forEach((btn) => {
   btn.addEventListener("click", () => {
     let playerSelection = btn.textContent.toLowerCase();
     let computerSelection = getComputerChoice().toLowerCase();
-    return playRound(playerSelection, computerSelection);
+    gameCount += 1;
+    gameCountElementText.textContent = `This is game ${gameCount}`;
+    if (gameCount >= 5) {
+      gameCountElementText.textContent = `This is game 0`;
+    } else {
+      return playRound(playerSelection, computerSelection);
+    }
   });
 });
 
