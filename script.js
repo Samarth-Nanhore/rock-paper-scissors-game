@@ -2,14 +2,18 @@ let selectionBtnElements = document
   .querySelector(".selection-btn")
   .querySelectorAll("div");
 
-let gameCountElementText = document.querySelector(".counter").textContent;
+let gameCountElementText = document.querySelector(".counter");
 
 let playerScoreElementText = document
   .querySelector(".score-container")
   .querySelector(".player")
-  .querySelector(".player-score").textContent;
+  .querySelector(".player-score");
 
 let computerScoreElementText = document
   .querySelector(".score-container")
   .querySelector(".computer")
-  .querySelector(".computer-score").textContent;
+  .querySelector(".computer-score");
+
+let gameResultElementText = document
+  .querySelector(".result-container")
+  .querySelector(".game-result");
