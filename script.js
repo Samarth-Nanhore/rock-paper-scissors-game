@@ -28,3 +28,9 @@ let getComputerChoice = () => {
     return "Scissors";
   }
 };
+
+selectionBtnElements.forEach((btn) => {
+  btn.addEventListener("click", () => {
+    let btnTextContext = btn.textContent;
+  });
+});
