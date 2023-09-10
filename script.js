@@ -48,10 +48,10 @@ let computerScore = 0;
 
 let game = (playerSelection, computerSelection) => {
   gameCount += 1;
-  gameCountElementText.textContent = `This is game ${gameCount}`;
-  if (gameCount >= 6) {
-    gameCountElementText.textContent = `Refresh to restart the game`;
-    gameResultElementText.textContent = `End`;
+  gameCountElement.textContent = `This is game ${gameCount}`;
+  if (gameCount >= 5) {
+    gameCountElement.textContent = `Refresh to restart the game`;
+    gameResultElement.remove();
     findWinner();
   } else {
     if (
@@ -59,42 +59,42 @@ let game = (playerSelection, computerSelection) => {
       (playerSelection === "scissors" && computerSelection === "rock")
     ) {
       if (playerSelection === "rock") {
-        playerScoreElementText.textContent = ` ${(playerScore += 1)}`;
-        gameResultElementText.textContent = "You Win! Rock beat Scissors";
+        playerScoreElement.textContent = ` ${(playerScore += 1)}`;
+        gameResultElement.textContent = "You Win! Rock beat Scissors";
       } else {
-        computerScoreElementText.textContent = `${(computerScore += 1)}`;
-        gameResultElementText.textContent = "You Lose! Rock beat Scissors";
+        computerScoreElement.textContent = `${(computerScore += 1)}`;
+        gameResultElement.textContent = "You Lose! Rock beat Scissors";
       }
     } else if (
       (playerSelection === "rock" && computerSelection === "paper") ||
       (playerSelection === "paper" && computerSelection === "rock")
     ) {
       if (playerSelection === "paper") {
-        playerScoreElementText.textContent = ` ${(playerScore += 1)}`;
-        gameResultElementText.textContent = "You Win! Paper beat Rocks";
+        playerScoreElement.textContent = ` ${(playerScore += 1)}`;
+        gameResultElement.textContent = "You Win! Paper beat Rocks";
       } else {
-        computerScoreElementText.textContent = `${(computerScore += 1)}`;
-        gameResultElementText.textContent = " You lose! Paper beat Rocks";
+        computerScoreElement.textContent = `${(computerScore += 1)}`;
+        gameResultElement.textContent = " You lose! Paper beat Rocks";
       }
     } else if (
       (playerSelection === "paper" && computerSelection === "scissors") ||
       (playerSelection === "scissors" && computerSelection === "paper")
     ) {
       if (playerSelection === "scissors") {
-        playerScoreElementText.textContent = `${(playerScore += 1)}`;
-        gameResultElementText.textContent = "You Win! Scissors beat Paper";
+        playerScoreElement.textContent = `${(playerScore += 1)}`;
+        gameResultElement.textContent = "You Win! Scissors beat Paper";
       } else {
-        computerScoreElementText.textContent = `${(computerScore += 1)}`;
-        gameResultElementText.textContent = "You Lose! Scissors beat Paper";
+        computerScoreElement.textContent = `${(computerScore += 1)}`;
+        gameResultElement.textContent = "You Lose! Scissors beat Paper";
       }
     } else if (
       (playerSelection === "paper" && computerSelection === "paper") ||
       (playerSelection === "rock" && computerSelection === "rock") ||
       (playerSelection === "scissors" && computerSelection === "scissors")
     ) {
-      gameResultElementText.textContent = "It's draw!";
+      gameResultElement.textContent = "It's draw!";
     } else {
-      gameResultElementText.textContent = `Your selection ${playerSelection} is not valid hence no score will consider`;
+      gameResultElement.textContent = `Your selection ${playerSelection} is not valid hence no score will consider`;
     }
   }
 };
